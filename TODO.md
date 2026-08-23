@@ -4,8 +4,9 @@
 
 - [x] Create Mining Area
 - [x] Create mine representation
-- [ ] Create mine data
+- [x] Create mine data
 - [x] Spawn 10 random mines
+- [x] Create mine representation
 - [ ] Create Player
 - [ ] Find nearest mine
 - [ ] Move Player automatically

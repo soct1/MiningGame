@@ -6,8 +6,12 @@ public class MineSpawner : MonoBehaviour
     [SerializeField] private MiningArea miningArea;
     [SerializeField] private GameObject minePrefab;
 
+    [Header("Floor Mines")]
+    [SerializeField] private MineData[] availableMines;
+
+    [Header("Spawn Settings")]
     [SerializeField] private int mineCount = 10;
-    [SerializeField] private float minimumSpawnDistance = 0.7f;
+    [SerializeField] private float minimumSpawnDistance = 1.2f;
     [SerializeField] private int maxSpawnAttempts = 100;
 
     private readonly List<Vector2> spawnedPositions = new();
@@ -34,12 +38,22 @@ public class MineSpawner : MonoBehaviour
 
             spawnedPositions.Add(spawnPosition);
 
-            Instantiate(
+            GameObject mineObject = Instantiate(
                 minePrefab,
                 spawnPosition,
                 Quaternion.identity,
                 transform
             );
+
+            Mine mine = mineObject.GetComponent<Mine>();
+
+            if (mine != null && availableMines.Length > 0)
+            {
+                MineData randomMine =
+                    availableMines[Random.Range(0, availableMines.Length)];
+
+                mine.SetData(randomMine);
+            }
         }
     }
 

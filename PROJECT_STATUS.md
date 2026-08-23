@@ -25,6 +25,11 @@ Project Setup
 - Mine positions are randomized
 - Minimum distance between mines is enforced
 - Mine spawn attempts are limited
+- MineData ScriptableObject system created
+- Stone mine data created
+- Coal mine data created
+- Floor can provide multiple mine types
+- Mines receive random mine data during spawning
 
 ## Current Goal
 
