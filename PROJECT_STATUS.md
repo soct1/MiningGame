@@ -6,6 +6,8 @@ Prototype 0.1
 
 ## Current Phase
 
+Mining Area & Mine Spawning
+
 Project Setup
 
 ## Completed
@@ -17,6 +19,12 @@ Project Setup
 - GitHub remote configured
 - Initial project pushed to GitHub
 - Main branch configured
+- Mining Area created
+- Mining Area supports configurable width and height
+- 10 mines spawn simultaneously
+- Mine positions are randomized
+- Minimum distance between mines is enforced
+- Mine spawn attempts are limited
 
 ## Current Goal
 

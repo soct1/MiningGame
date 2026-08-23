@@ -2,10 +2,10 @@
 
 ## Prototype 0.1
 
-- [ ] Create Mining Area
-- [ ] Create mine representation
+- [x] Create Mining Area
+- [x] Create mine representation
 - [ ] Create mine data
-- [ ] Spawn 10 random mines
+- [x] Spawn 10 random mines
 - [ ] Create Player
 - [ ] Find nearest mine
 - [ ] Move Player automatically
