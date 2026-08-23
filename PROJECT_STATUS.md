@@ -30,7 +30,11 @@ Project Setup
 - Coal mine data created
 - Floor can provide multiple mine types
 - Mines receive random mine data during spawning
-
+- Player automatically targets nearest mine
+- Player automatically moves toward target
+- Mining deals periodic damage
+- Damage affects all mines inside radius
+- Stone and Coal can be destroyed
 ## Current Goal
 
 Build the first playable mining loop.
