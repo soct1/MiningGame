@@ -24,6 +24,14 @@ public class Mine : MonoBehaviour
 
         currentHP -= actualDamage;
 
+        if (DamagePopupSpawner.Instance != null)
+        {
+            DamagePopupSpawner.Instance.ShowDamage(
+                transform.position,
+                actualDamage
+            );
+        }
+
         if (currentHP <= 0f)
         {
             currentHP = 0f;

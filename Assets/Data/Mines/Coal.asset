@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64f600e09a958ea42b9aade1156df5d5, type: 3}
   m_Name: Coal
   m_EditorClassIdentifier: Assembly-CSharp::MineData
-  mineName: 
-  maxHP: 10
+  mineName: Coal
+  maxHP: 20
   hardness: 1
-  resourceId: 
+  resourceId: Coal

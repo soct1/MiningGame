@@ -15,15 +15,27 @@ public class MineSpawner : MonoBehaviour
     [SerializeField] private int maxSpawnAttempts = 100;
 
     private readonly List<Vector2> spawnedPositions = new();
+    private readonly List<Mine> activeMines = new();
 
     private void Start()
     {
         SpawnMines();
     }
 
+    private void Update()
+    {
+        RemoveDestroyedMines();
+
+        if (activeMines.Count == 0)
+        {
+            SpawnMines();
+        }
+    }
+
     private void SpawnMines()
     {
         spawnedPositions.Clear();
+        activeMines.Clear();
 
         for (int i = 0; i < mineCount; i++)
         {
@@ -47,14 +59,24 @@ public class MineSpawner : MonoBehaviour
 
             Mine mine = mineObject.GetComponent<Mine>();
 
-            if (mine != null && availableMines.Length > 0)
+            if (mine == null)
+                continue;
+
+            if (availableMines.Length > 0)
             {
                 MineData randomMine =
                     availableMines[Random.Range(0, availableMines.Length)];
 
                 mine.SetData(randomMine);
             }
+
+            activeMines.Add(mine);
         }
+    }
+
+    private void RemoveDestroyedMines()
+    {
+        activeMines.RemoveAll(mine => mine == null);
     }
 
     private bool TryGetSpawnPosition(out Vector2 spawnPosition)
