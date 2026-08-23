@@ -3,7 +3,7 @@ using UnityEngine;
 public class Mine : MonoBehaviour
 {
     [SerializeField] private MineData data;
-
+    [SerializeField] private int resourceAmount = 1;
     private float currentHP;
 
     public MineData Data => data;
@@ -41,6 +41,14 @@ public class Mine : MonoBehaviour
 
     private void DestroyMine()
     {
+        ResourceInventory inventory =
+            FindAnyObjectByType<ResourceInventory>();
+
+        if (inventory != null && data.Resource != null)
+        {
+            inventory.Add(data.Resource, resourceAmount);
+        }
+
         Destroy(gameObject);
     }
 }
