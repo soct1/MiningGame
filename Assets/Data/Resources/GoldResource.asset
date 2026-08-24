@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5a15f6f0f033f64bb70e12fec638852, type: 3}
-  m_Name: StoneResource
+  m_Name: GoldResource
   m_EditorClassIdentifier: Assembly-CSharp::ResourceData
-  resourceName: Stone
+  resourceName: Gold

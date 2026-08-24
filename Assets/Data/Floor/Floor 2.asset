@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c39029c93b92424c919cc9a37f661d2, type: 3}
+  m_Name: Floor 2
+  m_EditorClassIdentifier: Assembly-CSharp::FloorData
+  floorName: Floor 1
+  availableMines:
+  - {fileID: 11400000, guid: 52c7e3eeb5e37f247a9a756dd6960022, type: 2}
+  - {fileID: 11400000, guid: 0a1d80d4814b40d45a197adc0fa9e9a5, type: 2}
+  mineCount: 10

@@ -28,5 +28,6 @@ public class ResourceInventory : MonoBehaviour
         {
             resources.Add(resource, amount);
         }
+        Debug.Log($"[ResourceInventory] +{amount} {resource.name} | Toplam: {resources[resource]}");
     }
 }

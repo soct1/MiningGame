@@ -15,4 +15,4 @@ MonoBehaviour:
   mineName: Stone
   maxHP: 10
   hardness: 1
-  resourceId: Stone
+  resource: {fileID: 11400000, guid: 9839945e0c270ce4a8e5556a8d84a8bc, type: 2}
