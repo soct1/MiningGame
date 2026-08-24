@@ -25,23 +25,4 @@ public class FloorManager : MonoBehaviour
 
         mineSpawner.SpawnFloor(floors[activeFloorIndex]);
     }
-
-    public void TestFloor1()
-    {
-        ChangeFloor(0);
-    }
-    public void TestFloor2()
-    {
-        ChangeFloor(1);
-    }
-
-    public void TestFloor3()
-    {
-        ChangeFloor(2);
-    }
-
-    public void TestFloor4()
-    {
-        ChangeFloor(3);
-    }
 }
