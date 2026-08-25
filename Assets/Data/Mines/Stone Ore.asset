@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64f600e09a958ea42b9aade1156df5d5, type: 3}
-  m_Name: Gold
+  m_Name: Stone Ore
   m_EditorClassIdentifier: Assembly-CSharp::MineData
-  mineName: Gold
+  mineName: Stone
   maxHP: 10
   hardness: 1
-  resource: {fileID: 11400000, guid: 01eaf1d787e75a2498911afaaf768f2a, type: 2}
+  ore: {fileID: 11400000, guid: 9839945e0c270ce4a8e5556a8d84a8bc, type: 2}
+  experience: 5

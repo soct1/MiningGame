@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,9 +13,8 @@ public class MineSpawner : MonoBehaviour
 
     private readonly List<Vector2> spawnedPositions = new();
     private readonly List<Mine> activeMines = new();
-
     private FloorData activeFloor;
-
+    public event Action FloorCleared;
     public void SpawnFloor(FloorData floor)
     {
         if (floor == null)
@@ -28,6 +28,7 @@ public class MineSpawner : MonoBehaviour
         activeFloor = floor;
 
         SpawnMines();
+
     }
 
     private void Update()
@@ -39,6 +40,11 @@ public class MineSpawner : MonoBehaviour
 
         if (activeMines.Count == 0)
         {
+            FloorCleared?.Invoke();
+
+            if (activeMines.Count > 0)
+                return;
+
             SpawnMines();
         }
     }
@@ -63,7 +69,7 @@ public class MineSpawner : MonoBehaviour
         if (totalWeight <= 0)
             return null;
 
-        int randomValue = Random.Range(0, totalWeight);
+        int randomValue = UnityEngine.Random.Range(0, totalWeight);
         int currentWeight = 0;
 
         foreach (FloorMineEntry entry in entries)
@@ -82,6 +88,12 @@ public class MineSpawner : MonoBehaviour
 
     private void SpawnMines()
     {
+        Debug.Log(
+            $"[MineSpawner] SpawnMines ÇAĞRILDI → " +
+            $"Floor: {activeFloor?.name} | " +
+            $"MineCount: {activeFloor?.MineCount}"
+        );
+
         if (activeFloor == null)
             return;
 
@@ -95,7 +107,7 @@ public class MineSpawner : MonoBehaviour
                     $"Mine {i + 1} için uygun spawn pozisyonu bulunamadı."
                 );
 
-                return;
+                break;
             }
 
             spawnedPositions.Add(spawnPosition);
@@ -115,9 +127,7 @@ public class MineSpawner : MonoBehaviour
             MineData randomMine = GetRandomMineData();
 
             if (randomMine != null)
-            {
                 mine.SetData(randomMine);
-            }
 
             activeMines.Add(mine);
         }

@@ -13,11 +13,15 @@ public class MineData : ScriptableObject
     [SerializeField] private float maxHP = 10f;
     [SerializeField] private float hardness = 1f;
 
-    [Header("Resource")]
-    [SerializeField] private ResourceData resource;
+    [Header("Ore")]
+    [SerializeField] private OreData ore;
+
+    [Header("Experience")]
+    [SerializeField] private int experience = 5;
 
     public string MineName => mineName;
     public float MaxHP => maxHP;
     public float Hardness => hardness;
-    public ResourceData Resource => resource;
+    public OreData Ore => ore;
+    public int Experience => experience;
 }

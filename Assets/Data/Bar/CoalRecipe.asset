@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c39a26cb0fc8149a890c219c10af6b, type: 3}
+  m_Name: CoalRecipe
+  m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipe
+  inputOre: {fileID: 11400000, guid: 90b1418abd1545a4ca072238d7f5ea0d, type: 2}
+  inputAmount: 10
+  outputBar: {fileID: 11400000, guid: facf6d8ea1f614d46ab6f04819e9bbee, type: 2}
+  outputAmount: 1

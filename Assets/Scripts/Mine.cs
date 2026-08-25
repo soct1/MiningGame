@@ -41,12 +41,20 @@ public class Mine : MonoBehaviour
 
     private void DestroyMine()
     {
-        ResourceInventory inventory =
-            FindAnyObjectByType<ResourceInventory>();
+        OreInventory inventory =
+            FindAnyObjectByType<OreInventory>();
 
-        if (inventory != null && data.Resource != null)
+        if (inventory != null && data.Ore != null)
         {
-            inventory.Add(data.Resource, resourceAmount);
+            inventory.Add(data.Ore, resourceAmount);
+        }
+
+        PlayerProgression progression =
+            FindAnyObjectByType<PlayerProgression>();
+
+        if (progression != null)
+        {
+            progression.AddExperience(data.Experience);
         }
 
         Destroy(gameObject);

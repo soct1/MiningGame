@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Floor 4
   m_EditorClassIdentifier: Assembly-CSharp::FloorData
   floorName: Floor 1
-  availableMines:
-  - {fileID: 11400000, guid: 52c7e3eeb5e37f247a9a756dd6960022, type: 2}
-  - {fileID: 11400000, guid: 0a1d80d4814b40d45a197adc0fa9e9a5, type: 2}
+  mineEntries:
+  - mineData: {fileID: 11400000, guid: 9c167872226bce449b433298fa610b69, type: 2}
+    weight: 100
   mineCount: 10

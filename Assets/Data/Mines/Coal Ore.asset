@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64f600e09a958ea42b9aade1156df5d5, type: 3}
-  m_Name: Coal
+  m_Name: Coal Ore
   m_EditorClassIdentifier: Assembly-CSharp::MineData
   mineName: Coal
-  maxHP: 20
+  maxHP: 10
   hardness: 1
-  resource: {fileID: 11400000, guid: 90b1418abd1545a4ca072238d7f5ea0d, type: 2}
+  ore: {fileID: 11400000, guid: 90b1418abd1545a4ca072238d7f5ea0d, type: 2}
+  experience: 10
